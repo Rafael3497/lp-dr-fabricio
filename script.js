@@ -52,18 +52,6 @@ const io = new IntersectionObserver((entries) => {
 revealEls.forEach(el => io.observe(el));
 
 // ==========================================
-// Galeria de fotos (setas de navegação)
-// ==========================================
-const gallery = document.getElementById('gallery');
-const prevBtn = document.querySelector('.gallery-prev');
-const nextBtn = document.querySelector('.gallery-next');
-if (gallery && prevBtn && nextBtn) {
-  const scrollAmount = () => gallery.querySelector('.gallery-item').offsetWidth + 18;
-  prevBtn.addEventListener('click', () => gallery.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
-  nextBtn.addEventListener('click', () => gallery.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
-}
-
-// ==========================================
 // Banner de Cookies LGPD (Google Ads/Analytics)
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -91,6 +79,36 @@ document.addEventListener("DOMContentLoaded", () => {
       
       // Remove do DOM após a animação de saída terminar (500ms)
       setTimeout(() => banner.remove(), 500); 
+    });
+  }
+});
+
+// ==========================================
+// Controle de Som do Vídeo "Como Chegar"
+// ==========================================
+document.addEventListener("DOMContentLoaded", function() {
+  const video = document.getElementById("comoChegarVideo");
+  const btn = document.getElementById("soundToggleBtn");
+  const iconMuted = document.getElementById("icon-muted");
+  const iconUnmuted = document.getElementById("icon-unmuted");
+
+  if(video && btn) {
+    btn.addEventListener("click", function() {
+      // Alterna a propriedade de mudo do vídeo
+      video.muted = !video.muted;
+      
+      // Atualiza os ícones SVG e o atributo aria-label baseado no estado do som
+      if(video.muted) {
+        iconMuted.style.display = "block";
+        iconUnmuted.style.display = "none";
+        btn.setAttribute("aria-label", "Ligar som");
+        btn.title = "Ligar som";
+      } else {
+        iconMuted.style.display = "none";
+        iconUnmuted.style.display = "block";
+        btn.setAttribute("aria-label", "Desligar som");
+        btn.title = "Desligar som";
+      }
     });
   }
 });
