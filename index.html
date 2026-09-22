@@ -522,6 +522,7 @@
       <h4>Contato</h4>
       <ul>
         <li><a href="https://wa.me/5585981970236" target="_blank" rel="noopener noreferrer">WhatsApp: (85) 98197-0236</a></li>
+        <li><a href="mailto:drfabricio.odonto@gmail.com">drfabricio.odonto@gmail.com</a></li>
         <li><span>Rua Monsenhor Bruno, 1153, sala 1327</span></li>
         <li><span>Aldeota, Fortaleza – CE</span></li>
       </ul>
@@ -597,53 +598,16 @@
     const banner = document.getElementById("cookieConsentBanner");
     const modal = document.getElementById("cookiePreferencesModal");
     const analyticsToggle = document.getElementById("cookieAnalyticsToggle");
-
     const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
-      banner.style.display = "flex";
-    }
-
-    function acceptAll() {
-      localStorage.setItem("cookieConsent", "all");
-      banner.style.display = "none";
-      modal.style.display = "none";
-    }
-
-    function rejectNonEssential() {
-      localStorage.setItem("cookieConsent", "essential");
-      banner.style.display = "none";
-      modal.style.display = "none";
-    }
-
+    if (!consent) { banner.style.display = "flex"; }
+    function acceptAll() { localStorage.setItem("cookieConsent", "all"); banner.style.display = "none"; modal.style.display = "none"; }
+    function rejectNonEssential() { localStorage.setItem("cookieConsent", "essential"); banner.style.display = "none"; modal.style.display = "none"; }
     document.getElementById("btnAcceptCookies").addEventListener("click", acceptAll);
     document.getElementById("btnRejectCookies").addEventListener("click", rejectNonEssential);
-    
-    document.getElementById("btnConfigCookies").addEventListener("click", function() {
-      banner.style.display = "none";
-      openCookiePreferences(null);
-    });
-
-    document.getElementById("btnSaveCookiePrefs").addEventListener("click", function() {
-      if (analyticsToggle.checked) {
-        acceptAll();
-      } else {
-        rejectNonEssential();
-      }
-    });
-
-    document.getElementById("btnCloseCookiePrefs").addEventListener("click", function() {
-      modal.style.display = "none";
-      if (!localStorage.getItem("cookieConsent")) {
-        banner.style.display = "flex";
-      }
-    });
-
-    window.openCookiePreferences = function(e) {
-      if(e) e.preventDefault(); 
-      const currentConsent = localStorage.getItem("cookieConsent");
-      analyticsToggle.checked = (currentConsent === "all");
-      modal.style.display = "flex";
-    };
+    document.getElementById("btnConfigCookies").addEventListener("click", function() { banner.style.display = "none"; openCookiePreferences(null); });
+    document.getElementById("btnSaveCookiePrefs").addEventListener("click", function() { if (analyticsToggle.checked) { acceptAll(); } else { rejectNonEssential(); } });
+    document.getElementById("btnCloseCookiePrefs").addEventListener("click", function() { modal.style.display = "none"; if (!localStorage.getItem("cookieConsent")) { banner.style.display = "flex"; } });
+    window.openCookiePreferences = function(e) { if(e) e.preventDefault(); const currentConsent = localStorage.getItem("cookieConsent"); analyticsToggle.checked = (currentConsent === "all"); modal.style.display = "flex"; };
   });
 </script>
 
