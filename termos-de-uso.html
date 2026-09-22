@@ -4,19 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Termos de Uso | Dr. Fabrício Mendonça de Oliveira</title>
-<meta name="description" content="Termos e condições de uso do site do consultório Dr. Fabrício Mendonça de Oliveira.">
-<meta name="robots" content="noindex, follow">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://dentistafabricio.com.br/termos-de-uso.html">
+<meta name="theme-color" content="#E1402A">
 
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Estilos exclusivos para o Banner de Cookies e Páginas Internas -->
+<style>
+  .page-content { padding: 120px 0 60px; min-height: 70vh; }
+  .page-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 30px; color: var(--ink); }
+  .page-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin: 30px 0 15px; color: var(--ink); }
+  .page-content p, .page-content li { font-size: 1rem; color: #4a4a4a; line-height: 1.6; margin-bottom: 15px; }
+  
+  /* Mantém estilos de Cookies da index */
+  .cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #ffffff; box-shadow: 0 -4px 15px rgba(0,0,0,0.08); z-index: 9999; padding: 20px 24px; border-top: 1px solid #eaeaea; display: none; justify-content: center; }
+  .cookie-content { max-width: 1200px; width: 100%; display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center; }
+  @media (min-width: 768px) { .cookie-content { flex-direction: row; text-align: left; justify-content: space-between; } }
+  .cookie-text { margin: 0; font-size: 0.9rem; color: #4a4a4a; line-height: 1.5; }
+  .cookie-text a { color: var(--brand, #E1402A); text-decoration: underline; font-weight: 500; }
+  .cookie-buttons { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .cookie-buttons .btn { padding: 10px 18px; font-size: 0.85rem; cursor: pointer; white-space: nowrap; }
+  .cookie-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .cookie-modal-content { background: #fff; padding: 30px; border-radius: 12px; max-width: 500px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+  .cookie-modal-content h3 { margin-top: 0; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #222; }
+  .cookie-option { margin: 15px 0; padding: 15px; background: #f8f7f5; border-radius: 8px; border: 1px solid #eaeaea; }
+  .cookie-option label { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+  .cookie-option input[type="checkbox"] { margin-top: 4px; accent-color: var(--brand, #E1402A); width: 16px; height: 16px; cursor: pointer; }
+  .cookie-option strong { display: block; margin-bottom: 4px; color: #222; font-family: 'Poppins', sans-serif; font-size: 0.95rem; }
+  .cookie-option span { font-size: 0.85rem; color: #666; display: block; line-height: 1.4; }
+  .cookie-modal-actions { display: flex; gap: 12px; margin-top: 25px; justify-content: flex-end; }
+</style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header id="header" class="scrolled">
+<header id="header" style="background: #fff; border-bottom: 1px solid #eaeaea;">
   <div class="container">
     <a href="index.html" class="brand">
       <img src="assets/logo.png" alt="Logo Dr. Fabrício Mendonça de Oliveira">
@@ -24,65 +50,55 @@
         <span>Consultório Odontológico</span>
       </div>
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
     <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#servicos">Serviços</a></li>
-        <li><a href="index.html#diferenciais">Diferenciais</a></li>
-        <li><a href="index.html#consultorio">Consultório</a></li>
-        <li><a href="index.html#faq">Dúvidas</a></li>
-        <li><a href="index.html#local">Localização</a></li>
-        <li><a class="btn btn-primary" href="https://wa.me/5585981970236" target="_blank" rel="noopener noreferrer">Agendar avaliação</a></li>
+      <ul class="nav-links">
+        <li><a href="index.html">Voltar ao site</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<!-- ================= CONTEÚDO LEGAL ================= -->
-<main class="legal-content">
-  <span class="eyebrow">Regras e Condições</span>
-  <h1>Termos de Uso</h1>
-  <p>Última atualização: Agosto de 2026</p>
+<section class="page-content">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <h1>Termos de Uso</h1>
+    
+    <h2>1. Condições Gerais e Natureza do Atendimento</h2>
+    <p>O presente site tem finalidade informativa e comercial para apresentação dos serviços prestados pelo <strong>Dr. Fabrício Mendonça de Oliveira</strong>, Cirurgião-Dentista devidamente inscrito no CRO-CE sob o nº 6683.</p>
+    <p>Os serviços divulgados neste site são prestados de forma pessoal e independente pelo Dr. Fabrício, mediante agendamento prévio. O espaço físico de atendimento (consultório) é compartilhado com outros profissionais da odontologia, os quais mantêm agendas, responsabilidades técnicas, pacientes e atividades profissionais totalmente independentes.</p>
 
-  <p>Bem-vindo ao site do <strong>Dr. Fabrício Mendonça de Oliveira</strong>. Ao acessar e utilizar este site, você concorda em cumprir e estar vinculado aos seguintes Termos de Uso. Se você não concordar com qualquer parte destes termos, por favor, não utilize nosso site.</p>
+    <h2>2. Informações de Saúde e Resultados</h2>
+    <p>O conteúdo deste site (textos, imagens, explicações de procedimentos) possui caráter estritamente educativo e informativo, não substituindo, em nenhuma hipótese, a consulta odontológica presencial.</p>
+    <p>A Odontologia não é uma ciência exata. Os resultados dos tratamentos (como implantes, alinhadores e endodontia) variam de paciente para paciente, dependendo de fatores biológicos, cooperação durante o tratamento e histórico de saúde. As informações aqui contidas não constituem promessa ou garantia de resultado absoluto.</p>
 
-  <h2>1. Uso do Site e Finalidade</h2>
-  <p>Este site possui caráter estritamente informativo e institucional. O conteúdo aqui disponibilizado, incluindo textos, imagens e vídeos, destina-se a apresentar os serviços odontológicos oferecidos e facilitar o agendamento de consultas.</p>
-  <p><strong>Importante:</strong> Nenhuma informação contida neste site substitui uma avaliação clínica presencial. Diagnósticos e planos de tratamento só podem ser realizados após consulta com o cirurgião-dentista.</p>
+    <h2>3. Agendamentos</h2>
+    <p>Os canais de contato disponibilizados no site têm o objetivo de facilitar a comunicação. Ao clicar nos botões de contato, você será redirecionado ao WhatsApp para iniciar uma conversa com o canal de atendimento profissional do Dr. Fabrício, onde poderá tirar dúvidas e marcar uma avaliação.</p>
+    
+    <h2>4. Modificações dos Termos</h2>
+    <p>Reservamo-nos o direito de alterar estes Termos de Uso e o conteúdo do site a qualquer momento, sem aviso prévio, adequando-os a atualizações legais ou a novas práticas do atendimento.</p>
+  </div>
+</section>
 
-  <h2>2. Propriedade Intelectual</h2>
-  <p>Todo o conteúdo presente neste site (logotipos, textos, fotografias do consultório, vídeos, design e código-fonte) é de propriedade exclusiva do consultório Dr. Fabrício Mendonça de Oliveira e está protegido pelas leis de direitos autorais. É terminantemente proibida a reprodução, distribuição ou modificação do conteúdo sem autorização prévia por escrito.</p>
-
-  <h2>3. Agendamentos e Comunicação</h2>
-  <p>Ao utilizar os botões de direcionamento para o WhatsApp, você concorda em iniciar uma conversa com nossa equipe de atendimento. O tempo de resposta pode variar conforme o horário comercial e a demanda do consultório.</p>
-
-  <h2>4. Links para Terceiros</h2>
-  <p>Nosso site pode conter links para sites de terceiros (como Google Maps para localização e WhatsApp para contato). Não nos responsabilizamos pelo conteúdo, políticas de privacidade ou práticas desses sites.</p>
-
-  <h2>5. Limitação de Responsabilidade</h2>
-  <p>Embora nos esforcemos para manter as informações do site atualizadas e corretas, não garantimos a exatidão absoluta de todos os dados em tempo real. O consultório não se responsabiliza por danos diretos ou indiretos decorrentes do uso das informações contidas neste site.</p>
-
-  <h2>6. Alterações nos Termos</h2>
-  <p>Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento, sem aviso prévio. Recomendamos a leitura periódica desta página.</p>
-</main>
-
-<!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER (IDÊNTICO) ================= -->
 <footer>
   <div class="container">
-    <div>
+    <div style="max-width: 320px;">
       <div class="foot-brand">
         <img src="assets/logo.png" alt="Logo Dr. Fabrício">
         <div class="brand-name">Dr. Fabrício<span>Consultório Odontológico</span></div>
       </div>
-      <p>Atendimento odontológico humanizado na Aldeota, Fortaleza, com foco em saúde, função e estética do sorriso.</p>
+      <p style="margin-top: 15px;">
+        <strong>Dr. Fabrício Mendonça de Oliveira</strong><br>
+        Cirurgião-Dentista — CRO-CE nº 6683<br>
+        <span style="display:block; margin-top:10px;">Atendimento odontológico profissional e independente, mediante agendamento.</span>
+      </p>
     </div>
     <div>
       <h4>Navegação</h4>
       <ul>
-        <li><a href="index.html#servicos">Serviços</a></li>
         <li><a href="index.html#diferenciais">Diferenciais</a></li>
+        <li><a href="index.html#consultorio">Consultório</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#sobre">Quem sou eu</a></li>
         <li><a href="index.html#faq">Dúvidas frequentes</a></li>
         <li><a href="index.html#local">Localização</a></li>
       </ul>
@@ -90,13 +106,17 @@
     <div>
       <h4>Contato</h4>
       <ul>
-        <li><a href="https://wa.me/5585981970236" target="_blank" rel="noopener noreferrer">+55 (85) 98197-0236</a></li>
-        <li><span>Rua Monsenhor Bruno, 1153 — Sala 1327</span></li>
+        <li><a href="https://wa.me/5585981970236" target="_blank" rel="noopener noreferrer">WhatsApp: (85) 98197-0236</a></li>
+        <li><span>Rua Monsenhor Bruno, 1153, sala 1327</span></li>
         <li><span>Aldeota, Fortaleza – CE</span></li>
       </ul>
     </div>
   </div>
   
+  <div class="bottom-disclaimer" style="text-align: center; margin: 0 auto 20px; font-size: 0.85rem; color: #a09d9a; max-width: 800px; padding: 0 20px;">
+    O espaço de atendimento é compartilhado com outros profissionais, que possuem agendas e atendimentos independentes.
+  </div>
+
   <div class="bottom">
     <div>© 2026 Dr. Fabrício Mendonça de Oliveira · Cirurgião-Dentista · Todos os direitos reservados.</div>
     <div class="legal-links">
@@ -105,10 +125,74 @@
       <a href="termos-de-uso.html">Termos de Uso</a>
       <span>|</span>
       <a href="exclusao-de-dados.html">Pedir exclusão dos dados</a>
+      <span>|</span>
+      <a href="#" onclick="openCookiePreferences(event)">Preferências de Cookies</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- ================= AVISO DE COOKIES (BANNER E MODAL) ================= -->
+<div id="cookieConsentBanner" class="cookie-banner">
+  <div class="cookie-content">
+    <p class="cookie-text">
+      Utilizamos cookies necessários para o funcionamento do site e, mediante sua autorização, cookies de análise e publicidade para medir o desempenho das campanhas. Você pode aceitar, recusar ou configurar suas preferências. Consulte nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+    </p>
+    <div class="cookie-buttons">
+      <button id="btnAcceptCookies" class="btn btn-primary">Aceitar todos</button>
+      <button id="btnRejectCookies" class="btn btn-ghost">Recusar não essenciais</button>
+      <button id="btnConfigCookies" class="btn btn-ghost" style="text-decoration: underline; border: none; background: transparent;">Configurar preferências</button>
+    </div>
+  </div>
+</div>
+
+<div id="cookiePreferencesModal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <h3>Preferências de Cookies</h3>
+    <p style="font-size: 0.95rem; color: #4a4a4a; margin-bottom: 20px;">Gerencie suas preferências de cookies abaixo:</p>
+    
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" checked disabled>
+        <div>
+          <strong>Cookies Estritamente Necessários</strong>
+          <span>Essenciais para o funcionamento do site (navegação, segurança, etc.). Não podem ser desativados.</span>
+        </div>
+      </label>
+    </div>
+    
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" id="cookieAnalyticsToggle">
+        <div>
+          <strong>Cookies de Análise e Publicidade</strong>
+          <span>Usados para medir o desempenho das campanhas do Google Ads e entender como os visitantes interagem com o site, de forma anônima.</span>
+        </div>
+      </label>
+    </div>
+    
+    <div class="cookie-modal-actions">
+      <button id="btnCloseCookiePrefs" class="btn btn-ghost">Cancelar</button>
+      <button id="btnSaveCookiePrefs" class="btn btn-primary">Salvar preferências</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const banner = document.getElementById("cookieConsentBanner");
+    const modal = document.getElementById("cookiePreferencesModal");
+    const analyticsToggle = document.getElementById("cookieAnalyticsToggle");
+    const consent = localStorage.getItem("cookieConsent");
+    if (!consent) { banner.style.display = "flex"; }
+    function acceptAll() { localStorage.setItem("cookieConsent", "all"); banner.style.display = "none"; modal.style.display = "none"; }
+    function rejectNonEssential() { localStorage.setItem("cookieConsent", "essential"); banner.style.display = "none"; modal.style.display = "none"; }
+    document.getElementById("btnAcceptCookies").addEventListener("click", acceptAll);
+    document.getElementById("btnRejectCookies").addEventListener("click", rejectNonEssential);
+    document.getElementById("btnConfigCookies").addEventListener("click", function() { banner.style.display = "none"; openCookiePreferences(null); });
+    document.getElementById("btnSaveCookiePrefs").addEventListener("click", function() { if (analyticsToggle.checked) { acceptAll(); } else { rejectNonEssential(); } });
+    document.getElementById("btnCloseCookiePrefs").addEventListener("click", function() { modal.style.display = "none"; if (!localStorage.getItem("cookieConsent")) { banner.style.display = "flex"; } });
+    window.openCookiePreferences = function(e) { if(e) e.preventDefault(); const currentConsent = localStorage.getItem("cookieConsent"); analyticsToggle.checked = (currentConsent === "all"); modal.style.display = "flex"; };
+  });
+</script>
 </body>
 </html>
